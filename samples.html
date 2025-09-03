@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BSIT Project - Resume</title>
+  <style>
+    
+  </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Login Form</h2>
+      <form id="login">
+        <div class=input-group>
+          <input type="email" id="user" placeholder="Enter your username" required>
+   
+    </div>
+        <div class=input-group>
+          <input type="password" id="pass" placeholder="Enter your password" required>
+          </div>
+            <input type="checkbox" id="check">
+          <div class="errormsg" id="errormsg"></div>
+          <button type="submit">logi n</button>
+          
+    </form>
+    </div>
+    <script>
+const form=document.getElementById('login');
+
+const errormsg=document.getElementById('errormsg');
+
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+
+
+      const user=document.getElementById('user').value.trim();
+      const pass=document.getElementById('pass').value.trim();
+const check=document.getElementById('check').checked;
+      
+
+      if(user==="kerwincuyag@gmail.com"  && pass==="123456"  && check===true){
+        alert("login successfully");
+        errormsg.textContent="";
+        
+        window.location.href="dashboard.html";
+        
+      }else if(check === false){
+        errormsg.textContent="pindota";
+      } else {
+        errormsg.textContent="invalid username or password";
+      
+      }
+      })
+      
+    </script>
+  </body>
+  </html>
+  
